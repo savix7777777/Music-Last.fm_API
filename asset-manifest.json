@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/room4Test/static/css/main.36c54485.chunk.css",
+    "main.js": "/room4Test/static/js/main.bb41c864.chunk.js",
+    "main.js.map": "/room4Test/static/js/main.bb41c864.chunk.js.map",
+    "runtime-main.js": "/room4Test/static/js/runtime-main.07c3bd65.js",
+    "runtime-main.js.map": "/room4Test/static/js/runtime-main.07c3bd65.js.map",
+    "static/js/2.b517c0c9.chunk.js": "/room4Test/static/js/2.b517c0c9.chunk.js",
+    "static/js/2.b517c0c9.chunk.js.map": "/room4Test/static/js/2.b517c0c9.chunk.js.map",
+    "static/js/3.ac55f015.chunk.js": "/room4Test/static/js/3.ac55f015.chunk.js",
+    "static/js/3.ac55f015.chunk.js.map": "/room4Test/static/js/3.ac55f015.chunk.js.map",
+    "index.html": "/room4Test/index.html",
+    "static/css/main.36c54485.chunk.css.map": "/room4Test/static/css/main.36c54485.chunk.css.map",
+    "static/js/2.b517c0c9.chunk.js.LICENSE.txt": "/room4Test/static/js/2.b517c0c9.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/room4Test/static/media/Inter-LightBETA (1).a87a1bff.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.07c3bd65.js",
+    "static/js/2.b517c0c9.chunk.js",
+    "static/css/main.36c54485.chunk.css",
+    "static/js/main.bb41c864.chunk.js"
+  ]
+}
