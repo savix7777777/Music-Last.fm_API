@@ -1,0 +1,50 @@
+@import "reset";
+@import "fonts/index";
+@import "components/track";
+@import "components/artist";
+@import "components/go-back";
+@import "components/search";
+
+#root{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-main{
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Inter;
+
+  &__h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d2c2a;
+    width: 100%;
+    font-size: 55px;
+    color: white;
+    text-shadow: #14B9D5 0 -20px 4px;
+    height: 2.5em;
+  }
+
+  &__tracks-box{
+    padding: 1%;
+    margin-top: 5%;
+    border: 2px solid white;
+    width: 80%;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0 30px rgb(194, 229, 253);
+  }
+}

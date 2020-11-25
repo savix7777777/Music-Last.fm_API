@@ -1,0 +1,31 @@
+.go-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  background-color: #2d2c2a;
+  width: 10%;
+  height: 2em;
+  color: #EC6259;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  outline: none;
+}
+
+.go-back:hover .fa-arrow-left{
+  animation: return 1.5s infinite linear;
+}
+
+@keyframes return {
+  0% {
+    margin-right: 0;
+  }
+
+  50% {
+    margin-right: 80%;
+  }
+  100% {
+    margin-right: 0;
+  }
+}

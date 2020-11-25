@@ -1,0 +1,61 @@
+.artist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  box-shadow: 0 0 30px rgb(194, 229, 253);
+  margin-top: 5%;
+  font-family: Inter;
+
+  &-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 17em;
+    margin-left: 2%;
+    font-size: 15px;
+
+    &__name{
+      font-size: 40px;
+      font-weight: 600;
+      color: #14B9D5;
+      margin-bottom: 1%;
+    }
+
+    &__tags{
+      margin-top: 0.5%;
+      margin-left: 3%;
+      list-style-type: disc;
+      width: 50%;
+    }
+
+    &__tags-title{
+      font-size: 17px;
+      color: white;
+      background-color: #2d2c2a;
+      padding: 0.5%;
+      font-weight: 600;
+      border-radius: 10px;
+    }
+
+    &__tags li a {
+      text-decoration: none;
+      color: #2d2c2a;
+      transition: 0.5s;
+    }
+
+    &__tags li:hover{
+      cursor: pointer;
+      & a{
+        color: #14B9D5;
+        font-weight: 600;
+        margin-left: 5%;
+      }
+    }
+
+    &__bio{
+      margin-top: 1%;
+    }
+  }
+}
