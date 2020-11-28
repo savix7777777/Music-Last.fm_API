@@ -1,24 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { keyAPI } from '../../config';
+import React, { useEffect } from 'react';
 import Button from "../Button";
-import {Route, useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchArtistData } from "../../store/actions/actionCreator";
 
 
 const Artist = ({name}) => {
 
-    const [artistInfo, setArtistInfo] = useState({});
+    const dispatch = useDispatch();
+
+    const fetchArtistInfo = (name) => dispatch(fetchArtistData(name));
+
     let history = useHistory();
 
     useEffect(() => {
-        fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${name}&api_key=${keyAPI}&format=json`)
-            .then(response => response.json())
-            .then(result => setArtistInfo(result));
+        fetchArtistInfo(name);
     });
+
+    const artistInfo = useSelector(({fetchArtistData}) => fetchArtistData);
 
     return(
         <>
             <Button onClick={() => history.push('/')} className='go-back'><i className="fas fa-arrow-left"> </i></Button>
-            {artistInfo.artist && <div className='artist'>
+            {Object.keys(artistInfo).length && <div className='artist'>
                 <img alt='artist-img' src={artistInfo.artist.image[4]['#text']} />
                 <div className='artist-info'>
                     <h2 className='artist-info__name'>{artistInfo.artist.name}</h2>

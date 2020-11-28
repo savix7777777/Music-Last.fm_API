@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
 import { createArtistData } from "../../store/actions/actionCreator";
-import {useHistory} from "react-router";
+import { useHistory } from "react-router";
 
 
 const Track = ({name, artist, image}) => {

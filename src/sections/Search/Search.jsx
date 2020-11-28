@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Button from "../Button";
+import Button from "../../components/Button";
 import { useHistory } from "react-router";
-import {createArtistData, createSetSearch} from "../../store/actions/actionCreator";
+import { createArtistData } from "../../store/actions/actionCreator";
 import { useDispatch } from "react-redux";
 import { keyAPI } from "../../config";
 
@@ -10,6 +10,8 @@ const Search = () => {
 
     const dispatch = useDispatch();
 
+    let history = useHistory();
+
     const [inputValue, setInputValue] = useState('');
     const [trackList, setTrackList] = useState([]);
 
@@ -17,18 +19,15 @@ const Search = () => {
         if(inputValue){
             fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${inputValue}&api_key=${keyAPI}&format=json`)
                 .then(response => response.json())
-                .then(result => setTrackList(result.results.trackmatches.track));
+                .then(result => setTrackList(result.results.trackmatches.track))
+                .catch(e => console.log(`Error ${e.name}: ${e.message}`));
         }
     });
 
-    let history = useHistory();
-
-    const changeSearch = (value) => dispatch(createSetSearch(value));
     const getArtistData = (value) => dispatch(createArtistData(value));
 
     const handleClick = () => {
-        changeSearch(false);
-        history.push('/')
+        history.push('/');
     };
 
     const handleClickArtist = (e) => {
@@ -48,7 +47,7 @@ const Search = () => {
                             <h2 className='search-results__track-title'>{elem.name}</h2>
                             <p className='track-content__artist search-results__track-artist'>Artist:<span onClick={handleClickArtist}>{elem.artist}</span></p>
                         </div>
-                    )
+                    );
                 })}
             </div>
         </>
